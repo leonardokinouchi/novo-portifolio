@@ -1,2 +1,2 @@
-# novo-portif-lio
+# novo portifolio
 Projeto do meu novo portifólio feito com next js 
