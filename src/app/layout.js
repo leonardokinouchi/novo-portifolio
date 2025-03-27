@@ -1,5 +1,6 @@
 import { Orbitron } from "next/font/google";
 import "./globals.css";
+import Header from "./components/header";
 
 const font = Orbitron({
   subsets: ['latin']
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <body className={`${font.className} antialiased`}>
 
-
+        <Header></Header>
         {children}
 
 

@@ -1,21 +1,23 @@
 "use client"
 
 import { motion } from "motion/react"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Particles(){
 
     const [particles, setParticles] = useState([]);
+    const particleCount = useRef(0)
+    
 
     useEffect(() => {
         
         const interval = setInterval(() => {
             
             setParticles((prevParticles) => {
-            // Limita a 50 partículas, removendo as mais antigas
+                const id = `particle-${particleCount.current++}`
                 const newParticles = [
                 ...prevParticles,
-                <Particle key={Date.now()} />
+                <Particle key={id}/>
                 ].slice(-200);
                 return newParticles;
             });
@@ -24,7 +26,7 @@ export default function Particles(){
     
 
     return (
-        <div className="absolute h-full w-full">
+        <div className="absolute h-full w-full overflow-hidden">
             {particles}
         </div>
     )
@@ -52,9 +54,9 @@ function Particle(){
             initial={{ opacity: 1, x: 0, y: 0 }}
             animate={{ x: moveX, y: moveY, opacity: 0 }}
             transition={{
-                x: { duration: 8, ease: "easeInOut" },
-                y: { duration: 8, ease: "easeInOut" },
-                opacity: { delay: 6, duration: 2, ease: "easeInOut" }
+                x: { duration: 3, ease: "easeInOut" },
+                y: { duration: 3, ease: "easeInOut" },
+                opacity: {duration: 3, ease: "easeInOut" }
               }}
             className="absolute bg-amber-50 rounded-full"
             style={{
