@@ -39,7 +39,7 @@ export default function Home() {
         <Form/>
 
         <div className="flex flex-col items-center gap-5 z-10">
-          <div className="flex items-center bg-sky-950/60 w-90 outline-1 h-125 justify-center shadow-[inset_0px_0px_50px_rgba(255,255,255,0.12),0_0_30px_10px_rgba(0,0,0,1)] rounded-2xl"><img src="/curriculo.webp" className="w-80 rounded-2xl"></img></div>
+          <div className="flex items-center bg-sky-950/60 w-90 outline-1 h-125 justify-center shadow-[inset_0px_0px_50px_rgba(255,255,255,0.12),0_0_30px_10px_rgba(0,0,0,1)] rounded-2xl"><img src="/curriculo.jpg" className="w-80 rounded-2xl"></img></div>
           <a href="/curriculo_pdf.pdf" download className="p-2 bg-sky-950/90 text-white rounded-2xl hover:bg-sky-700 pl-5 pr-5 outline-1">Baixar</a>
         </div>
         
